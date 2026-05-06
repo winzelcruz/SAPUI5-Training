@@ -5,7 +5,7 @@
 	xmlns:l="sap.ui.layout"
 	xmlns:f="sap.ui.layout.form"
 	xmlns:core="sap.ui.core">
-    <Page class="sapUiSmallMargin" showFooter="true"> 
+    <Page class="sapUiSmallMargin" showHeader="false"> 
 		<f:SimpleForm id="SimpleFormChange471"
 			editable="true"
 			layout="ResponsiveGridLayout"
