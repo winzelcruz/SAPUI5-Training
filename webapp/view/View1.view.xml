@@ -1,6 +1,61 @@
 <mvc:View controllerName="com.acn.project1.controller.View1"
+    displayBlock="true"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-    </Page>
+    xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+    <Page class="sapUiSmallMargin" showFooter="true"> 
+		<f:SimpleForm id="SimpleFormChange471"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="4"
+			labelSpanL="4"
+			labelSpanM="4"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="1"
+			emptySpanL="1"
+			emptySpanM="1"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="true" >
+			<f:content>
+				<Label text="{i18n>lblName}" />
+				<Input id="idName" value="{Name}" />
+				<Label text="{i18n>lblStreetNo}" />
+				<Input id="idStreet" value="{Street}">
+				</Input>
+				<Input id="idHouseNumber" value="{HouseNumber}">
+					<layoutData>
+						<l:GridData span="XL1 L2 M2 S4" />
+					</layoutData>
+				</Input>
+				<Label text="{i18n>lblZIPCodeCity}" />
+				<Input id="idZipCode" value="{ZIPCode}">
+					<layoutData>
+						<l:GridData span="XL1 L2 M2 S4" />
+					</layoutData>
+				</Input>
+				<Input id="idCity" value="{City}" />
+				<Label text="{i18n>lblCountry}" />
+				<Select id="idCountry" selectedKey="{Country}">
+					<items>
+						<core:Item text="" key="0"/>
+						<core:Item text="England" key="England"/>
+						<core:Item text="Germany" key="Germany"/>
+						<core:Item text="USA" key="USA"/>
+						<core:Item text="Philippines" key="Philippines"/>
+					</items>
+				</Select>
+                <OverflowToolbar class="cstFooter">
+                    <ToolbarSpacer/>
+                    <Button type="Accept" text="{i18n>txtSave}" />
+                    <Button type="Reject" text="{i18n>txtClear}" press=".onClearPress" />
+                </OverflowToolbar>
+			</f:content>
+		</f:SimpleForm>
+	</Page>
 </mvc:View>
